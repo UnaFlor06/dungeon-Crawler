@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run dungeonCrawl",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/dungeonCrawl",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "build dungeonCrawl",
+            "miDebuggerArgs": "",
+            "debugServerArgs": "",
+            "serverStarted": "",
+            "filterStderr": false,
+            "filterStdout": false,
+            "serverLaunchTimeout": 10000,
+            "showDisplayString": true,
+            "visualizerFile": "${workspaceFolder}/.vscode/visualizer.natvis"
+        }
+    ]
+}
