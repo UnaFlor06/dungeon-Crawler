@@ -1,12 +1,10 @@
-#include"global.c"
+#include"global.h"
 int stagetest = 0;
 
 #define X 82   // número de colunas (Y)
 #define Y 27    // número de linhas (X)
 int i;
 int j;
-int map;
-void map;{
 
     char matriz[Y][X + 1] = {
         "####################################...0--0...####################################",
@@ -36,10 +34,9 @@ void map;{
         "#                                0..............0                                #",
         "#                                   0........0                                   #",
         "#####################################..0--0..#####################################"
-    };                                           
-    for (int i = 0; i < Y; i++) {
-        printf("%s\n", matriz[i]);
-    }
-
-    return 0;
+    };
+void map(){
+for (int i = 0; i < Y; i++) {
+    printw("%s\n", matriz[i]);
 }
+};
