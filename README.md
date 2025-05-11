@@ -12,3 +12,6 @@ Também foi adicionado um texto bobo na hora de sair do jogo (futuramente pensan
 
 //Quarto commit:
 Para o quarto commit, não há mudanças significativas ao código, apenas uma alteração para a capacidade de playback de arquivos .wav e um novo arquivo de texto para servir como splashscreen. A música placeholder é o tema de título do Metroid original de NES, acho que serve para dar direcionamento para a composição musical futura do jogo (sim, pretendo fazer música original pra isso aqui).
+
+//Quinto commit:
+Apenas terminei a splashscreen.
