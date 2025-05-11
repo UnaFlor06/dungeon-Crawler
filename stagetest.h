@@ -1,8 +1,8 @@
 #include"global.h"
 int stagetest = 0;
 
-#define X 82   // número de colunas (Y)
-#define Y 27    // número de linhas (X)
+#define X 82   // número de colunas (X)
+#define Y 27    // número de linhas (Y)
 int i;
 int j;
 
@@ -33,7 +33,7 @@ int j;
         "#                             0....................0                             #",
         "#                                0..............0                                #",
         "#                                   0........0                                   #",
-        "#####################################..0--0..#####################################"
+        "#####################################..0--0..#####################################",
     };
 void map(){
 for (int i = 0; i < Y; i++) {
