@@ -1,5 +1,9 @@
 dungeon Crawl (com C maísuculo) é um jogo simples em C feito como trabalho de programação no Centro Universitário Do Pará. O foco do trabalho é praticar o conteúudo de programação trabalhado em aula.
 
+//Obs: O jogo foi feito em um computador Linux, utilizando de comandos de sistema e bibliotecas do sistema operacional Linux, não existe planejamento de suporte multiplataforma para sistemas como Windows ou MacOS.
+/
+O jogo foi desenvolvido com PCs de arquitetura x86 em mente, não garanto compatibilidade com dispositivos de arquitetura ARM (dispositivos com Apple Silicon ou processadores snapdragon).
+
 //Segundo Commit:
 Implementação inicial do menu principal com a biblioteca ncurses. Primeira iteração de um mapa renderizado com matrizes.
 /
@@ -25,3 +29,8 @@ Até agora, o commit mais importante. Foram implementados uma nova splashscreen 
 O tamanho do terminal foi resolvido através da função "resizeterm" do ncurses, consequentemente stagetest finalmente é desenhado apropriadamente, entretanto terá que ser reajustado para caber na tela. A decisão final foi de dar o tamanho de 256 linhas por 240 colunas, essa escolha foi feita por ser o que considero ser uma área suficiente para monstrar diversos elementos em tela (principalmente os mais detalhados) sem ser uma área impossível de ser trabalhada (como o originalmente pensado de 640 por 480). A ideia é simular um framebuffer de 256x240 (o mesmo das versões NTSC do NES), creio eu que seja o suficiente.
 /
 Por último, um novo header (mensagensbobas.h) com a função "silly" foi criado para servir como uma forma de gerar pequenas mensagens bobinhas ao finalizar o jogo. A ideia veio de dois jogos em específico, Fallout e Terraria. Em Fallout, ao finalizar o jogo existe a possibilidade de uma de várias splashscreen especiais serem mostradas na tela. Em Terraria, o nome do executável pode ser um de vários quando o jogo é iniciado. Posteriormente, se isso não tomar muito do meu tempo, pretendo fazer outro sistema que faz o mesmo, mas para pequenos textos discritivos no menu prinipal (ala Minecaft) ou descrições/dicas nas telas de transição do jogo (elas não são necessárias, mas são legais).
+
+//Sétimo commit:
+Submenu de opções funcional (função draw_settings). Menu principal agora em loop, possibilitando seu uso contínuo até que não seja mais requisitado. 
+/
+Adição da pasta "readme", serão armazenados alguns documentos visuais (concepts e GDD), este registro e instruções de compilação.

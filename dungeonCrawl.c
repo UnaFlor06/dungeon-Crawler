@@ -5,15 +5,7 @@
 //Contantes
 #define NUM_OPTIONS 5
 #define NEW_GAME 2
-
-//Música tema (placeholder pelo momento)
-void play_sound(const char *filename) {
-char command[256];
-snprintf(command, sizeof(command), "aplay -q \"%s\" &", filename); 
-system(command);
-}
-
-
+#define NUM_SETTINGS 4
 
 const char*options[NUM_OPTIONS] = {
 "New Game", //0
@@ -22,6 +14,19 @@ const char*options[NUM_OPTIONS] = {
 "Credits", //3
 "Exit", //4
 };
+const char*settings[NUM_SETTINGS] = {
+"Volume", //0
+"Colour", //1
+"Keybinds", //2
+"Main Menu", //3
+};
+
+//Música tema (placeholder pelo momento)
+void play_sound(const char *filename) {
+char command[256];
+snprintf(command, sizeof(command), "aplay -q \"%s\" &", filename); 
+system(command);
+}
 
 #define NEW_GAME 2    
 const char*new[NEW_GAME] = {
@@ -29,20 +34,36 @@ const char*new[NEW_GAME] = {
 "Não", //1
 };
 
+//Settings função
+void draw_settings(int settingselect){
+clear(); //somente unix
+for (int i = 0; i < NUM_SETTINGS; ++i) {
+if (i == settingselect) {
+    attron(A_REVERSE);  
+    printw("> %s <\n", settings[i]);
+    attroff(A_REVERSE);
+    }
+else{
+    printw("  %s\n", settings[i]);
+    }
+    refresh;
+}
+}
+
 //titlescreen função
 void draw_menu(int selected) {
 clear();  //somente unix
 printw("                                                     .::.                                 .~P5~\n");
-printw("                                                  .:~!????7!^.                             7@@!\n");
-printw("                                               :^!7???????????7~^.                     .~!~Y@@~           .          ....     ~!!!~    .::.   .:\n");
+printw("                                                  .:~!????7!^.                             7@@!           JG                                   BJ\n");
+printw("                                               :^!7???????????7~^.                     .~!~Y@@~           JG5          ....     ~!!!~    .::.  BJ7\n");
 printw("                                           .^!7???????????????????7~:.                ?B&?B@@@~ ^B#!^BB! .JG5!B#5^ ^Y#YB#B!.~G@J!J@G~.?#P5#?::YBJ7#B?:\n");
-printw("                                       .^!7???????????????????????????!~:.            G@# P@@@^ ~@@?~@@7   P@&?B@#.G@# G@@@^J@@?!J@@?^@@7~@@7 .#@B?&@P\n");
+printw("                                       .^!7???????????????????????????!~:.            G@# P@@@^ ~@@?~@@7   P@& B@#.G@# G@@@^J@@?!J@@?^@@7~@@7 .#@B?&@P\n");
 printw("                                   .:~7??????????????????????????????????7!^:         Y&&~B@@B7.~@@?~@@7   P@& P@#.7B&?#@@@^7#@5JJJ!.~@@?!@@7 .#@P &@P\n");
 printw("                               .:~7????????????77!~^^:::::::^^~!7????????????7!^.      ^????7 7^.!BP5#7J7  Y#G.Y#G.:^^^^Y@@^ :????7. .^P55P~. .P#Y.G#Y\n");
-printw("                          .:~!????????????7!^:.                 .:~7????????????7!^.              ...  .\n");
-printw("                         :!7?????????????!:.                         .^7?????????????7!:\n");
-printw("                        :??????????????~.                               :!????????JY5PGY\n");
-printw("                        ^????????????!.                                   :7???JYPPGGGGP.\n");
+printw("                          .:~!????????????7!^:.                 .:~7????????????7!^.              ...  .                Y@@¨\n");
+printw("                         :!7?????????????!:.                         .^7?????????????7!:                               Y@/\n");
+printw("                        :??????????????~.                               :!????????JY5PGY                               Y@\n");
+printw("                        ^????????????!.                                   :7???JYPPGGGGP.                             Y@/\n");
 printw("                        ^???????????^               ..:::::.               ^Y5PGGGGGGGG5.\n");
 printw("                        ^??????????:             :~7????????7!^.       :~J5PGGGGGGGGGGG5.                                    ^@@@@7\n");
 printw("                        ^?????????:            ^7???????????????!: .~?5GBBBGGGGBGBGGGGG5 .^^^^^^^^:      :^^^^      .^^^^.   ^@@@@7      JPPPPPPPP^   .^^^^. .^^^^\n");
@@ -81,10 +102,14 @@ else{
 refresh();  
 }
 
+//int main
+
 int main(){
 
-int selected = 1;
+int selected;
+int settingselect;
 int ch;
+int geralmenu = 1;
 int menu = 1;
 int musica = 1;
 
@@ -98,10 +123,10 @@ cbreak();
 noecho();          
 keypad(stdscr, TRUE); 
 
-draw_menu(selected);
 
-//Condicional do menu
-while (1) {
+while(geralmenu){
+draw_menu(selected);
+while (menu == 1) {
 ch = getch();
 switch (ch) {
     case KEY_UP:  
@@ -112,7 +137,7 @@ switch (ch) {
     break;
     case 10:  
     clear();
-    printw("Você escolheu: %s\n", options[selected]); //Placeholder, fins de debug (mostrar se as constantes para opção estão funcionais).
+     //Placeholder, fins de debug (mostrar se as constantes para opção estão funcionais).
     if (selected == 4) {  
         printw("Saindo do jogo...\n");
         break;
@@ -122,10 +147,8 @@ switch (ch) {
         getch();
         break;
         }
-    if (selected != 0){
-        printw("Pressione qualquer tecla para voltar ao menu..."); //Opção para voltar ao menu após escolha de opções.
-        refresh();
-        getch();
+    if (selected == 2 && ch == 10){
+        menu = 2;
         break;
         }
     }
@@ -148,10 +171,36 @@ draw_menu(selected);
     }
 }
 
-// sempre iguale música a zero para não deixar ela tocar no fundo após o término do programa.
-musica == 0;
+//Settings
+draw_settings(settingselect);
+
+while(menu == 2){
+
+
+ch = getch();
+switch (ch){
+case KEY_UP:  
+    settingselect = (settingselect - 1 + NUM_SETTINGS) % NUM_SETTINGS;
+    break;
+    case KEY_DOWN:  
+    settingselect = (settingselect + 1) % NUM_SETTINGS;
+    break;
+    case 10:  
+    clear();
+    if(ch == 10 && settingselect == 3){
+        menu = 1;
+        break;
+    }
+}
+draw_settings(settingselect);
+}
+
+
+musica = 0;
+silly();
 if(musica == 0){
 system("killall aplay");
+}
 }
 return 0;
 }
