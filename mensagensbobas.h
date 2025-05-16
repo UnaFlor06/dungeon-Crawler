@@ -80,6 +80,6 @@ printf("Unforseen consequences...\n");
 if(sillyexit == 25){
     do{printf("NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL\n");
     }while (nulo == 0);
-    for(nulo = 0; nulo >100; nulo++);
+    for(nulo = 0; nulo < 100; nulo++);
 }
 }

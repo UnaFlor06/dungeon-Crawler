@@ -1,4 +1,4 @@
-dungeon Crawl (com C maísuculo) é um jogo simples em C feito como trabalho de programação no Centro Universitário Do Pará. O foco do trabalho é praticar o conteúudo de programação trabalhado em aula.
+dungeon Crawler (com C maísuculo) é um jogo simples em C feito como trabalho de programação no Centro Universitário Do Pará. O foco do trabalho é praticar o conteúdo de programação trabalhado em aula.
 
 //Obs: O jogo foi feito em um computador Linux, utilizando de comandos de sistema e bibliotecas do sistema operacional Linux, não existe planejamento de suporte multiplataforma para sistemas como Windows ou MacOS.
 /
@@ -34,3 +34,14 @@ Por último, um novo header (mensagensbobas.h) com a função "silly" foi criado
 Submenu de opções funcional (função draw_settings). Menu principal agora em loop, possibilitando seu uso contínuo até que não seja mais requisitado. 
 /
 Adição da pasta "readme", serão armazenados alguns documentos visuais (concepts e GDD), este registro e instruções de compilação.
+
+//Oitavo commit:
+Menu principal foi devidamente terminado em suas funcionalidades básicas, ele será futuramente alterado para a se enquadrar na estrutura de headers e funções, além de ser alterado em prol de seu visual e experiência de usuário. Todas as opções com subemnus estão funcoionais, suas funcionalidades estão detalhadas no arquivo main (dungeonCrawl.C) e no header "menu.h".
+/
+Alterações de tipografia: O código foi organizado para satisfazer meus gostos de tipografia, além disso, algumas funções foram removidas do arquivo main e transferidas para os headers, agora o arquivo main apenas inclui o código para a funcionalidade do menu e não os códigos das funções de cada botão. Furutamente, pretendo fazer todo o menu principal ser uma função ou strucutre, o propósito é fazer com que o arquivo main apenas inclua funções interagindo entre si, e as diversas funções do jogo sejam detalhadas em outros headers.
+/
+Guide.md: Esse arquivo será onde será escrito o manual do jogo, com suas funcionalidades, premissa e elementos "in universe". Por motivos de portfólio, tanto o jogo quanto o guia serão a partir de agora escritos em inglês, isso dará uma desculpa para marcar o repositório como "inglês", eu acho.
+/
+Planos futuros: Bom... A partir de agora, a parte mais "fácil" do trabalho foi finalizada, e agora o jogo e suas mecânicas começarão a ser implementadas de fato, o design do jogo em si (anexarei o arquivo no próximo commit) já está quase finalizado, além dos elementos exigidos pelo trabalho já serem conhecidos, os elementos extras (como a ambientação, trilha sonora, elementos narrativos e afins) já estão sendo desenvolvidos. O plano agora é implementar o stagetest de vez e fazer um sistema de movimentação para o personagem. Por fim, ainda serão feitas em prol da UX.
+/
+P.S: Por cortesia de minha namorada, agora temos um artista à bordo.
