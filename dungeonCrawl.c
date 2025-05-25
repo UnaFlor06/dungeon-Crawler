@@ -29,7 +29,7 @@ play_sound("placeholder.wav");
 }
 
 initscr();        
-resizeterm(256, 240); //tamanho da tela do terminal externo (somente tesado no GNOME terminal)
+resizeterm(51, 179); //tamanho da tela do terminal externo (somente tesado no GNOME terminal)	
 cbreak();           
 noecho();          
 keypad(stdscr, TRUE); 
@@ -50,7 +50,7 @@ ch = getch();
     break;
     case 10:  
     clear();
-    if(ch == 10 && selected == 0){
+        if(ch == 10 && selected == 0){
         menu = 5;
         break;
         }
@@ -67,7 +67,7 @@ ch = getch();
         break;
         }
         else if(ch == 10 && selected == 4){
-            menu = 4;
+        menu = 4;
             if(menu == 4){
             system("killall aplay");
             endwin();
@@ -95,8 +95,6 @@ ch = getch();
 
 draw_credits(creditscreen);
 }
-
-
 
 //Settings
 draw_settings(settingselect);

@@ -6,7 +6,12 @@
 #include<stdbool.h>
 #include<unistd.h>
 
+//Constantes menu.h
 #define NUM_OPTIONS 5
 #define NEW_GAME 2
 #define LOAD_GAME 4
 #define NUM_SETTINGS 4
+
+//Constantes PC
+//Constantes NPC
+//Constantes Map
