@@ -1,7 +1,7 @@
 #include"global.h"
-#include"stagetest.h"  
 #include"mensagensbobas.h"
 #include"menu.h"
+#include"stageplayer.h"
 
 //Música tema (placeholder pelo momento)
 void play_sound(const char *filename) {
@@ -13,7 +13,6 @@ system(command);
 //int main
 
 int main(){
-
 int selected;
 int settingselect;
 int newgame;
@@ -23,6 +22,7 @@ int ch;
 int geralmenu = 1;
 int menu = 1;
 int musica = 1;
+
 
 if(musica == 1){
 play_sound("placeholder.wav");
@@ -135,10 +135,13 @@ ch = getch();
         break;
         }
         if(ch == 10 && newgame == 0){
+        drawn_level1 = 2;
         clear();
         refresh;
-        map();
-        continue;
+            while(drawn_level1 == 2){
+            level1();
+            }
+        break;
         }
     }
 draw_new(newgame);

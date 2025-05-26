@@ -43,5 +43,13 @@ Alterações de tipografia: O código foi organizado para satisfazer meus gostos
 Guide.md: Esse arquivo será onde será escrito o manual do jogo, com suas funcionalidades, premissa e elementos "in universe". Por motivos de portfólio, tanto o jogo quanto o guia serão a partir de agora escritos em inglês, isso dará uma desculpa para marcar o repositório como "inglês", eu acho.
 /
 Planos futuros: Bom... A partir de agora, a parte mais "fácil" do trabalho foi finalizada, e agora o jogo e suas mecânicas começarão a ser implementadas de fato, o design do jogo em si (anexarei o arquivo no próximo commit) já está quase finalizado, além dos elementos exigidos pelo trabalho já serem conhecidos, os elementos extras (como a ambientação, trilha sonora, elementos narrativos e afins) já estão sendo desenvolvidos. O plano agora é implementar o stagetest de vez e fazer um sistema de movimentação para o personagem. Por fim, ainda serão feitas em prol da UX.
+
+//Nono commit
+tristeza
+
+//Décimo commit
+FINALMETE, temos um nível funcional, com movimentação e tudo, é maravilhoso. Muitas coisas foram realocadas, agora o "globalh" começou realmente a mostrar sua função, realmente é uma maravilha poder utilizar headers assim. A matriz foi reajustada com um novo tamanho de 179x51, é o maior tamanho que o GNOME terminal pode ficar no meu laptop. O "stageplayer" é essa primeira tentativa, as matrizes são renderizadas separadamente em outro arquivo e organizadas em funções, posteriormente, o "stageplayer" pega essas matrizes e "coloca" o jogador nelas. Com isso, também são declaradas variáveis para posição do jogador. Pelo momento, o maior problema é impedir que o player saia da tela.
 /
-P.S: Por cortesia de minha namorada, agora temos um artista à bordo.
+Pra amanhã, serão feitos alguns ajustes no readme e na matriz que gera o primeiro nível. Preciso agora comçar a "desenhar" no computador esses níveis. Além de uma tela de ajuda com os controles, e falando neles, os controles serão alterados para funcionar tanto o "WASD" e as "setinhas".
+/
+Já foi estabelecido uma base para uma possível tela de pausa, ou que pelo menos faça de modo mais intuitivo a função de "remover" o jogador do jogo ao apertar ESC.

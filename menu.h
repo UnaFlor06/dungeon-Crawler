@@ -24,6 +24,10 @@ const char*new[NEW_GAME] = {
 "YES", //0
 "NO", //1
 };
+const char*fin[EXIT_GAME] = { 
+"YES", //0
+"NO", //1
+};
 
 
 //Função new game
@@ -81,6 +85,22 @@ printw("Antônio Guilherme Benigno Milhomem\n");
 printw("Amanda Kelen Santos Azevedo\n");
 printw("\nPress Return/Enter\n");
 refresh();
+}
+
+//Função exit
+void draw_exit(int exitgame){
+clear(); //somente unix
+for (int i = 0; i < EXIT_GAME; ++i) {
+    if (i == exitgame) {
+    attron(A_REVERSE);  
+    printw("> %s <\n", fin[i]);
+    attroff(A_REVERSE);
+    }
+else{
+    printw("  %s\n", fin[i]);
+    }
+    refresh;
+}
 }
 
 //Função menu principal

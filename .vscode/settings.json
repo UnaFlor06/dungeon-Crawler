@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "time.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "global.h": "c",
+        "stagetest.h": "c"
     }
 }
