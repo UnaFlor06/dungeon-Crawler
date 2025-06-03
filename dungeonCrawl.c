@@ -42,31 +42,31 @@ draw_menu(selected);
 while (menu == 1){
 ch = getch();
     switch (ch){
-    case KEY_UP:  
+    case 'w':  
     selected = (selected - 1 + NUM_OPTIONS) % NUM_OPTIONS;
     break;
-    case KEY_DOWN:  
+    case 's':  
     selected = (selected + 1) % NUM_OPTIONS;
     break;
-    case 10:  
+    case 101:  
     clear();
-        if(ch == 10 && selected == 0){
+        if(ch == 101 && selected == 0){
         menu = 5;
         break;
         }
-        if(ch == 10 && selected == 1){
+        if(ch == 101 && selected == 1){
         menu = 3;
         break;
         }
-        else if (ch == 10 && selected == 2){
+        else if (ch == 101 && selected == 2){
         menu = 2;
         break;
         }
-        else if (ch == 10 && selected == 3){
+        else if (ch == 101 && selected == 3){
         menu = 6;
         break;
         }
-        else if(ch == 10 && selected == 4){
+        else if(ch == 101 && selected == 4){
         menu = 4;
             if(menu == 4){
             system("killall aplay");
@@ -85,9 +85,9 @@ draw_credits(creditscreen);
 while(menu == 6){
 ch = getch();
     switch(ch){
-    case 10:
+    case 101:
     clear();
-        if(ch == 10){
+        if(ch == 101){
         menu = 1;
         break;
         }
@@ -101,15 +101,15 @@ draw_settings(settingselect);
 while(menu == 2){
 ch = getch();
     switch (ch){
-    case KEY_UP:  
+    case 'w':  
     settingselect = (settingselect - 1 + NUM_SETTINGS) % NUM_SETTINGS;
     break;
-    case KEY_DOWN:  
+    case 's':  
     settingselect = (settingselect + 1) % NUM_SETTINGS;
     break;
-    case 10:  
+    case 101:  
     clear();
-        if(ch == 10 && settingselect == 3){
+        if(ch == 101 && settingselect == 3){
         menu = 1;
         break;
         }
@@ -122,19 +122,19 @@ draw_new(newgame);
 while(menu == 5){
 ch = getch();
     switch (ch){
-    case KEY_UP:  
+    case 'w':  
     newgame = (newgame - 1 + NEW_GAME) % NEW_GAME;
     break;
-    case KEY_DOWN:  
+    case 's':  
     newgame = (newgame + 1) % NEW_GAME;
     break;
-    case 10:  
+    case 101:  
     clear();
-        if(ch == 10 && newgame == 1){
+        if(ch == 101 && newgame == 1){
         menu = 1;
         break;
         }
-        if(ch == 10 && newgame == 0){
+        if(ch == 101 && newgame == 0){
         drawn_level1 = 2;
         clear();
         refresh;
@@ -152,15 +152,15 @@ draw_load(loadgame);
 while(menu == 3){
 ch = getch();
     switch (ch){
-    case KEY_UP:  
+    case 'w':  
     loadgame = (loadgame - 1 + LOAD_GAME) % LOAD_GAME;
     break;
-    case KEY_DOWN:  
+    case 's':  
     loadgame = (loadgame + 1) % LOAD_GAME;
     break;
-    case 10:  
+    case 101:  
     clear();
-        if(ch == 10 && loadgame == 3){
+        if(ch == 101 && loadgame == 3){
         menu = 1;
         break;
         }

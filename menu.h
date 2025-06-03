@@ -82,8 +82,7 @@ else{
 void draw_credits(int creditscreen){
 clear();
 printw("Antônio Guilherme Benigno Milhomem\n");
-printw("Amanda Kelen Santos Azevedo\n");
-printw("\nPress Return/Enter\n");
+printw("\nPress E\n");
 refresh();
 }
 
@@ -106,7 +105,7 @@ else{
 //Função menu principal
 void draw_menu(int selected) {
 clear();  //somente unix
-printw("                                                     .::.                                 .~P5~\n");
+printw("                                                      .::.                                 .~P5~\n");
 printw("                                                  .:~!????7!^.                             7@@!           JG                                   BJ\n");
 printw("                                               :^!7???????????7~^.                     .~!~Y@@~           JG5          ....     ~!!!~    .::.  BJ7\n");
 printw("                                           .^!7???????????????????7~:.                ?B&?B@@@~ ^B#!^BB! .JG5!B#5^ ^Y#YB#B!.~G@J!J@G~.?#P5#?::YBJ7#B?:\n");
@@ -119,13 +118,13 @@ printw("                        :??????????????~.                               
 printw("                        ^????????????!.                                   :7???JYPPGGGGP.                             Y@/\n");
 printw("                        ^???????????^               ..:::::.               ^Y5PGGGGGGGG5.\n");
 printw("                        ^??????????:             :~7????????7!^.       :~J5PGGGGGGGGGGG5.                                    ^@@@@7\n");
-printw("                        ^?????????:            ^7???????????????!: .~?5GBBBGGGGBGBGGGGG5 .^^^^^^^^:      :^^^^      .^^^^.   ^@@@@7      JPPPPPPPP^   .^^^^. .^^^^\n");
-printw("                       ^????????!           .!?????????????????YYYPGGGB&@@@BG&@@@&GGGGP^Y@@##@@@@5      Y@@@&.     ~@@@@!   ^@@@@7   .Y5&@G7??J@@G5! ^B#@@J:Y@@@@!:.\n");
-printw("                        ^????????:           !??????????????JY5PGGGGGGGGGB@@@@@@@@@@@GP&@@@B..#@@@5..    Y@@@&. ..  ~@@@@!   ^@@@@7   :&@@@?    &@@@Y   :#@@@&###&@@7\n");
-printw("                        ^???????7.          :???????????JY5PGGGGGGGGGGGGPB@@@@BGGGB@&GP&@@@B  #@@@@&B    Y@@@&:.P@J !@@@@!   ^@@@@7   :&@@@GJJJY@@@@Y   .#@@@5 ...B@!\n");
-printw("                        ^???????7.          :???????JY5GGGGGGGGGGGGGGGGGPB@@@@BPGGGGGGG&@@@B  #@@@@@#    J@@@@##@@@#&@@@@!   ^@@@@7   :&@@@BYYYYYYY5!   .#@@@Y    ...\n");
-printw("                        ^????????.          .7???Y5PGBBBBBBGGGGGGGGGGGGGPB@@@@BPGGGGGGG&@@@B  #@@@@@#.   .:?@@@@@@@@@@&~:.   ^@@@@7   .Y5&@P777777.     .#@@@Y\n");
-printw("                        ^????????~           :YGGBBBBBBBBBBBBBBGGGPGGGGGPB@@@@BPGGGGGGGP^Y@@BB@@Y:Y@@BG:   !@@@@?:P@@@&.     .^~&@#B?    JPPPPPPPP^     .#@@@Y\n");
+printw("                        ^?????????:            ^7???????????????!: .~?5GBBGGGGGBGBGGGGG5 .^^^^^^^^:      :^^^^      .^^^^.   ^@@@@7      JPPPPPPPP^   .^^^^. .^^^^\n");
+printw("                       ^????????!           .!?????????????????YYYPGGGB&@@@   &&&GGGGP^Y@@##@@@@5      Y@@@&.     ~@@@@!   ^@@@@7   .Y5&@G7??J@@G5! ^B#@@J:Y@@@@!:.\n");
+printw("                        ^????????:           !??????????????JY5PGGGGGGGGGB           GP&@@@B..#@@@5..    Y@@@&. ..  ~@@@@!   ^@@@@7   :&@@@?    &@@@Y   :#@@@&###&@@7\n");
+printw("                        ^???????7.          :???????????JY5PGGGGGGGGGGGGPB    BGGGB@  P&@@@B  #@@@@&B    Y@@@&:.P@J !@@@@!   ^@@@@7   :&@@@GJJJY@@@@Y   .#@@@5 ...B@!\n");
+printw("                        ^???????7.          :???????JY5GGGGGGGGGGGGGGGGGPB    BPGGGGGGG&@@@B  #@@@@@#    J@@@@##@@@#&@@@@!   ^@@@@7   :&@@@BYYYYYYY5!   .#@@@Y    ...\n");
+printw("                        ^????????.          .7???Y5PGBBBBBBGGGGGGGGGGGGGPB    BPGGGGGGG&@@@B  #@@@@@#.   .:?@@@@@@@@@@&~:.   ^@@@@7   .Y5&@P777777.     .#@@@Y\n");
+printw("                        ^????????~           :YGGBBBBBBBBBBBBBBGGGPGGGGGPB    BPGGGGGGGP^Y@@BB@@Y:Y@@BG:   !@@@@?:P@@@&.     .^~&@#B?    JPPPPPPPP^     .#@@@Y\n");
 printw("                        ^?????????.           :YBBBBBBBBBBBBBBBBG7.:!J5GGGBBBBGGGGGGGGG5 .~~!!~~. .~~!!.   .~~~~. :~~~~         ^~~!^                    ^^^~:\n");
 printw("                        ^?????????7             ^?5GBBBBBBBBBGY!.     .^!J5GGPGGGGGGGGG5.\n");
 printw("                        ^?????????YY:              :~!7???7!^.            .^5GGGGGGGGGG5.\n");

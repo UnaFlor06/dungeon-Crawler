@@ -13,4 +13,6 @@ clear();
     }
     }
 mvaddch(pcy, pcx, '&');
+
+mvaddch(5,5,'@');
 }

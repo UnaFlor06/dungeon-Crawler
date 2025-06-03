@@ -2,7 +2,7 @@ dungeon Crawler (com C maísuculo) é um jogo simples em C feito como trabalho d
 
 //Obs: O jogo foi feito em um computador Linux, utilizando de comandos de sistema e bibliotecas do sistema operacional Linux, não existe planejamento de suporte multiplataforma para sistemas como Windows ou MacOS.
 /
-O jogo foi desenvolvido com PCs de arquitetura x86 em mente, não garanto compatibilidade com dispositivos de arquitetura ARM (dispositivos com Apple Silicon ou processadores snapdragon).
+O jogo foi desenvolvido com PCs de arquitetura x86 em mente, não garanto compatibilidade com dispositivos de arquitetura ARM (dispositivos com Apple Silicon ou processadores Snapdragon).
 
 //Segundo Commit:
 Implementação inicial do menu principal com a biblioteca ncurses. Primeira iteração de um mapa renderizado com matrizes.

@@ -12,7 +12,8 @@ matricemap1();
 ch = getch();
     switch(ch){
     case 'w': 
-    pcy--;
+    if(pcy-1 != 5 && pcx != 5)
+    pcy --;
     break;
     case 'a': 
     pcx--;
@@ -27,6 +28,7 @@ ch = getch();
     clear();
     refresh();
     drawn_level1 = 1;
+    
     break;
     }
 }
